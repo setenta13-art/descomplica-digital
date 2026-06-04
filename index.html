@@ -1,0 +1,3060 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Descomplica Digital | Tecnologia, Organização e Estratégia sem Complicação</title>
+<meta content="Resolva problemas do dia a dia com apoio prático em tecnologia, finanças, documentos, produtividade, presença digital e vendas online. Atendimento remoto, simples e personalizado." name="description"/>
+<meta content="Descomplica Digital, João Bueno, consultoria digital, organização financeira, inteligência artificial, produtividade, vendas online, presença digital, documentos, veículos" name="keywords"/>
+<meta content="Descomplica Digital" name="author"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Descomplica Digital | Tecnologia, Organização e Estratégia sem Complicação" property="og:title"/>
+<meta content="Tecnologia, organização e estratégia para resolver problemas reais do dia a dia, de forma simples e sem complicação." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="pt_BR" property="og:locale"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --bg-main: #f6f9fc;
+            --bg-white: #ffffff;
+            --bg-soft: #edf5ff;
+            --bg-dark: #07172f;
+            --primary: #0b5cff;
+            --primary-dark: #0845c7;
+            --primary-soft: #dce9ff;
+            --accent: #2ee6a6;
+            --accent-dark: #12b981;
+            --yellow: #ffd76a;
+            --text-main: #102033;
+            --text-muted: #65758b;
+            --text-light: #f8fbff;
+            --border: #dce6f2;
+            --shadow: 0 24px 70px rgba(7, 23, 47, 0.12);
+            --shadow-soft: 0 12px 34px rgba(7, 23, 47, 0.08);
+            --radius-lg: 28px;
+            --radius-md: 20px;
+            --radius-sm: 14px;
+            --max-width: 1180px;
+            --header-height: 78px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: "Quicksand", sans-serif;
+            background: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea {
+            font-family: inherit;
+        }
+
+        img,
+        svg {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(100% - 32px, var(--max-width));
+            margin-inline: auto;
+        }
+
+        .section {
+            padding: 96px 0;
+            position: relative;
+        }
+
+        @supports (content-visibility: auto) {
+            .section {
+                content-visibility: auto;
+                contain-intrinsic-size: 1px 720px;
+            }
+        }
+
+        .section-sm {
+            padding: 64px 0;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(11, 92, 255, 0.09);
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            margin-bottom: 18px;
+        }
+
+        .eyebrow.dark {
+            background: rgba(46, 230, 166, 0.12);
+            color: var(--accent);
+        }
+
+        .section-header {
+            max-width: 760px;
+            margin-bottom: 42px;
+        }
+
+        .section-header.center {
+            text-align: center;
+            margin-inline: auto;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3.25rem);
+            line-height: 1.05;
+            letter-spacing: -0.06em;
+            margin-bottom: 18px;
+        }
+
+        .section-header p {
+            font-size: 1.08rem;
+            color: var(--text-muted);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 48px;
+            padding: 14px 22px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            font-size: 0.96rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            box-shadow: 0 16px 32px rgba(11, 92, 255, 0.25);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 20px 40px rgba(11, 92, 255, 0.32);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: #06201b;
+            box-shadow: 0 16px 32px rgba(18, 185, 129, 0.24);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.86);
+            color: var(--text-main);
+            border-color: var(--border);
+            backdrop-filter: blur(14px);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .btn-dark-outline {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.18);
+        }
+
+        .btn-dark-outline:hover {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            min-height: var(--header-height);
+            background: rgba(246, 249, 252, 0.82);
+            backdrop-filter: blur(22px);
+            border-bottom: 1px solid rgba(220, 230, 242, 0.72);
+        }
+
+        .nav {
+            min-height: var(--header-height);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: max-content;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            background: radial-gradient(circle at 28% 24%, #ffffff 0 12%, transparent 13%), linear-gradient(135deg, var(--primary), var(--accent));
+            box-shadow: 0 12px 24px rgba(11, 92, 255, 0.22);
+        }
+
+        .brand-text strong {
+            display: block;
+            font-size: 1rem;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+        }
+
+        .brand-text span {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 26px;
+            list-style: none;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            position: relative;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 2px;
+            border-radius: 999px;
+            background: var(--primary);
+            transition: width 0.25s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            background: #fff;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 20px;
+            height: 2px;
+            border-radius: 999px;
+            background: var(--text-main);
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .hero {
+            padding: 70px 0 92px;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at 80% 12%, rgba(46, 230, 166, 0.18), transparent 30%), radial-gradient(circle at 12% 26%, rgba(11, 92, 255, 0.14), transparent 30%);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: auto -120px -220px -120px;
+            height: 420px;
+            background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.88));
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.02fr 0.98fr;
+            gap: 54px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.55rem, 6vw, 5.3rem);
+            line-height: 0.96;
+            letter-spacing: -0.08em;
+            margin-bottom: 24px;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-content h1 span::after {
+            content: "";
+            position: absolute;
+            left: 3px;
+            right: 3px;
+            bottom: 5px;
+            height: 12px;
+            background: rgba(46, 230, 166, 0.28);
+            z-index: -1;
+            border-radius: 999px;
+        }
+
+        .hero-lead {
+            font-size: clamp(1.06rem, 2vw, 1.26rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin-bottom: 28px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .trust-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            color: var(--text-muted);
+            font-size: 0.94rem;
+            font-weight: 700;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .check {
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            background: rgba(46, 230, 166, 0.18);
+            color: var(--accent-dark);
+            font-weight: 900;
+            flex: 0 0 auto;
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 540px;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 999px;
+            filter: blur(0px);
+            opacity: 0.95;
+        }
+
+        .orb.one {
+            width: 310px;
+            height: 310px;
+            top: 36px;
+            right: 48px;
+            background: linear-gradient(135deg, rgba(11, 92, 255, 0.2), rgba(46, 230, 166, 0.26));
+            animation: float 7s ease-in-out infinite;
+        }
+
+        .orb.two {
+            width: 130px;
+            height: 130px;
+            bottom: 84px;
+            left: 18px;
+            background: rgba(255, 215, 106, 0.45);
+            animation: float 9s ease-in-out infinite reverse;
+        }
+
+        .dashboard-card {
+            position: absolute;
+            inset: 48px 12px auto auto;
+            width: min(100%, 470px);
+            padding: 22px;
+            border-radius: 34px;
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid rgba(255, 255, 255, 0.88);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(22px);
+            z-index: 2;
+        }
+
+        .dashboard-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .window-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .window-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--border);
+        }
+
+        .window-dots span:nth-child(1) {
+            background: #ff6b6b;
+        }
+
+        .window-dots span:nth-child(2) {
+            background: #ffd166;
+        }
+
+        .window-dots span:nth-child(3) {
+            background: #06d6a0;
+        }
+
+        .dashboard-badge {
+            padding: 6px 10px;
+            background: rgba(46, 230, 166, 0.15);
+            color: #087b60;
+            border-radius: 999px;
+            font-size: 0.76rem;
+            font-weight: 900;
+        }
+
+        .mock-title {
+            font-size: 1.45rem;
+            line-height: 1.12;
+            letter-spacing: -0.05em;
+            margin-bottom: 18px;
+        }
+
+        .flow-list {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .flow-item {
+            display: grid;
+            grid-template-columns: 44px 1fr auto;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 18px;
+            background: rgba(246, 249, 252, 0.92);
+            border: 1px solid rgba(220, 230, 242, 0.92);
+        }
+
+        .flow-icon {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            background: #fff;
+            font-size: 1.3rem;
+            box-shadow: 0 8px 22px rgba(7, 23, 47, 0.08);
+        }
+
+        .flow-item strong {
+            display: block;
+            font-size: 0.93rem;
+            letter-spacing: -0.03em;
+        }
+
+        .flow-item span {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        .status-pill {
+            font-size: 0.72rem;
+            font-weight: 900;
+            color: var(--primary);
+            background: var(--primary-soft);
+            padding: 6px 9px;
+            border-radius: 999px;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .mini-card {
+            min-height: 88px;
+            padding: 12px;
+            border-radius: 18px;
+            background: linear-gradient(180deg, #fff, #f8fbff);
+            border: 1px solid var(--border);
+        }
+
+        .mini-card span {
+            font-size: 1.35rem;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .mini-card strong {
+            display: block;
+            font-size: 0.76rem;
+            line-height: 1.18;
+            letter-spacing: -0.02em;
+        }
+
+        .floating-note {
+            position: absolute;
+            left: 10px;
+            bottom: 80px;
+            width: 245px;
+            padding: 18px;
+            border-radius: 24px;
+            background: var(--bg-dark);
+            color: #fff;
+            box-shadow: var(--shadow);
+            z-index: 3;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .floating-note strong {
+            display: block;
+            font-size: 0.96rem;
+            margin-bottom: 5px;
+        }
+
+        .floating-note p {
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 0.84rem;
+            line-height: 1.45;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-16px);
+            }
+        }
+
+        .position-card {
+            border-radius: var(--radius-lg);
+            padding: 42px;
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-soft);
+            display: grid;
+            grid-template-columns: 0.86fr 1.14fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .position-copy h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            line-height: 1.05;
+            letter-spacing: -0.06em;
+            margin-bottom: 18px;
+        }
+
+        .position-copy p {
+            color: var(--text-muted);
+            font-size: 1.08rem;
+            margin-bottom: 18px;
+        }
+
+        .promise {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            border-radius: 18px;
+            background: var(--bg-soft);
+            color: var(--primary);
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        .step-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .step-card {
+            padding: 24px;
+            min-height: 230px;
+            border-radius: 24px;
+            background: radial-gradient(circle at top right, rgba(46, 230, 166, 0.18), transparent 42%), #f8fbff;
+            border: 1px solid var(--border);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .step-number {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 900;
+            margin-bottom: 18px;
+        }
+
+        .step-card h3 {
+            font-size: 1.2rem;
+            letter-spacing: -0.04em;
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.94rem;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .audience-card {
+            padding: 24px;
+            border-radius: 24px;
+            background: #fff;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 24px rgba(7, 23, 47, 0.05);
+            transition: transform 0.25s ease, border 0.25s ease;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(11, 92, 255, 0.36);
+        }
+
+        .audience-card span {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        .audience-card h3 {
+            font-size: 1.05rem;
+            line-height: 1.22;
+            letter-spacing: -0.04em;
+            margin-bottom: 8px;
+        }
+
+        .audience-card p {
+            color: var(--text-muted);
+            font-size: 0.93rem;
+        }
+
+        .dark-section {
+            background: radial-gradient(circle at 10% 10%, rgba(46, 230, 166, 0.16), transparent 28%), radial-gradient(circle at 90% 0%, rgba(11, 92, 255, 0.24), transparent 36%), var(--bg-dark);
+            color: var(--text-light);
+            overflow: hidden;
+        }
+
+        .dark-section .section-header p {
+            color: rgba(248, 251, 255, 0.72);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .process-card {
+            position: relative;
+            min-height: 260px;
+            padding: 26px;
+            border-radius: 26px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(14px);
+        }
+
+        .process-card::after {
+            content: "";
+            position: absolute;
+            top: 36px;
+            right: -18px;
+            width: 36px;
+            height: 2px;
+            background: rgba(46, 230, 166, 0.5);
+        }
+
+        .process-card:last-child::after {
+            display: none;
+        }
+
+        .process-card .num {
+            color: var(--accent);
+            font-weight: 900;
+            font-size: 0.9rem;
+            margin-bottom: 18px;
+            display: block;
+        }
+
+        .process-card h3 {
+            font-size: 1.15rem;
+            line-height: 1.2;
+            letter-spacing: -0.04em;
+            margin-bottom: 10px;
+        }
+
+        .process-card p {
+            color: rgba(248, 251, 255, 0.72);
+            font-size: 0.94rem;
+        }
+
+        .services-wrapper {
+            display: grid;
+            gap: 56px;
+        }
+
+        .service-group {
+            display: grid;
+            gap: 22px;
+        }
+
+        .group-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .group-title h3 {
+            font-size: clamp(1.35rem, 3vw, 2rem);
+            letter-spacing: -0.05em;
+            line-height: 1.1;
+        }
+
+        .group-tag {
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: var(--bg-soft);
+            color: var(--primary);
+            font-weight: 900;
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-grid.two {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            padding: 28px;
+            border-radius: 28px;
+            background: #fff;
+            border: 1px solid var(--border);
+            box-shadow: 0 14px 34px rgba(7, 23, 47, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(11, 92, 255, 0.12), transparent 38%);
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            pointer-events: none;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-soft);
+            border-color: rgba(11, 92, 255, 0.32);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-soft);
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card h4 {
+            font-size: 1.42rem;
+            line-height: 1.14;
+            letter-spacing: -0.05em;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card .impact {
+            color: var(--primary);
+            font-weight: 900;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.96rem;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-list {
+            list-style: none;
+            display: grid;
+            gap: 8px;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-list li {
+            display: flex;
+            gap: 9px;
+            color: var(--text-muted);
+            font-size: 0.91rem;
+        }
+
+        .service-list li::before {
+            content: "✓";
+            color: var(--accent-dark);
+            font-weight: 900;
+            flex: 0 0 auto;
+        }
+
+        .service-card .btn {
+            margin-top: auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chooser {
+            display: grid;
+            grid-template-columns: 0.86fr 1.14fr;
+            gap: 34px;
+            align-items: center;
+            padding: 44px;
+            border-radius: 34px;
+            background: radial-gradient(circle at 100% 0%, rgba(46, 230, 166, 0.22), transparent 34%), linear-gradient(135deg, var(--primary), #071f55);
+            color: #fff;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .chooser h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.02;
+            letter-spacing: -0.06em;
+            margin-bottom: 14px;
+        }
+
+        .chooser p {
+            color: rgba(255, 255, 255, 0.76);
+            font-size: 1.04rem;
+            margin-bottom: 22px;
+        }
+
+        .chooser-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .chooser-option {
+            min-height: 190px;
+            padding: 20px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            cursor: pointer;
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        .chooser-option:hover {
+            background: rgba(255, 255, 255, 0.16);
+            transform: translateY(-4px);
+        }
+
+        .chooser-option span {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .chooser-option strong {
+            display: block;
+            font-size: 1rem;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+        }
+
+        .chooser-option small {
+            color: rgba(255, 255, 255, 0.68);
+            font-weight: 600;
+        }
+
+        .differentials-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .differential-card {
+            padding: 24px;
+            border-radius: 24px;
+            background: #fff;
+            border: 1px solid var(--border);
+            min-height: 180px;
+            box-shadow: 0 12px 28px rgba(7, 23, 47, 0.05);
+        }
+
+        .differential-card span {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(46, 230, 166, 0.16);
+            color: #087b60;
+            margin-bottom: 14px;
+            font-weight: 900;
+        }
+
+        .differential-card h3 {
+            font-size: 1.02rem;
+            line-height: 1.22;
+            letter-spacing: -0.04em;
+            margin-bottom: 8px;
+        }
+
+        .differential-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .value-card {
+            padding: 24px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            min-height: 150px;
+        }
+
+        .value-card span {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .value-card h3 {
+            font-size: 1.08rem;
+            line-height: 1.2;
+            letter-spacing: -0.04em;
+            margin-bottom: 8px;
+        }
+
+        .value-card p {
+            color: rgba(248, 251, 255, 0.7);
+            font-size: 0.92rem;
+        }
+
+        .commercial-path {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 34px;
+            padding: 34px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .path-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        .path-item {
+            position: relative;
+            padding: 20px;
+            border-radius: 22px;
+            background: #f8fbff;
+            border: 1px solid var(--border);
+            min-height: 170px;
+        }
+
+        .path-item::after {
+            content: "→";
+            position: absolute;
+            top: 50%;
+            right: -18px;
+            transform: translateY(-50%);
+            color: var(--primary);
+            font-weight: 900;
+            font-size: 1.4rem;
+            z-index: 2;
+        }
+
+        .path-item:last-child::after {
+            display: none;
+        }
+
+        .path-item span {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+
+        .path-item h3 {
+            font-size: 0.98rem;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .path-item p {
+            color: var(--text-muted);
+            font-size: 0.86rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 36px;
+            align-items: start;
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: #fff;
+            overflow: hidden;
+            box-shadow: 0 8px 22px rgba(7, 23, 47, 0.04);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            background: transparent;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 900;
+            color: var(--text-main);
+        }
+
+        .faq-question span {
+            color: var(--primary);
+            font-size: 1.2rem;
+            transition: transform 0.25s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.28s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+            font-size: 0.94rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 220px;
+        }
+
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
+
+        .final-cta {
+            text-align: center;
+            padding: 74px 36px;
+            border-radius: 38px;
+            background: radial-gradient(circle at 20% 0%, rgba(255, 215, 106, 0.38), transparent 30%), radial-gradient(circle at 80% 20%, rgba(46, 230, 166, 0.26), transparent 30%), linear-gradient(135deg, #07172f, #0b3e94);
+            color: #fff;
+            box-shadow: var(--shadow);
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2.1rem, 5vw, 4rem);
+            line-height: 1;
+            letter-spacing: -0.07em;
+            max-width: 760px;
+            margin: 0 auto 18px;
+        }
+
+        .final-cta p {
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 660px;
+            margin: 0 auto 26px;
+            font-size: 1.08rem;
+        }
+
+        .final-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .footer {
+            background: #050f20;
+            color: #fff;
+            padding: 54px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr 0.9fr;
+            gap: 34px;
+            margin-bottom: 34px;
+        }
+
+        .footer h3 {
+            font-size: 1.2rem;
+            letter-spacing: -0.04em;
+            margin-bottom: 12px;
+        }
+
+        .footer p,
+        .footer a,
+        .footer li {
+            color: rgba(255, 255, 255, 0.68);
+            font-size: 0.94rem;
+        }
+
+        .footer ul {
+            list-style: none;
+            display: grid;
+            gap: 8px;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            color: rgba(255, 255, 255, 0.58);
+            font-size: 0.88rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 1100;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #25d366, #11b45b);
+            color: #fff;
+            box-shadow: 0 18px 34px rgba(37, 211, 102, 0.36);
+            font-size: 1.7rem;
+            border: 3px solid rgba(255, 255, 255, 0.74);
+            transition: transform 0.25s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @media (max-width: 1080px) {
+
+            .nav-links,
+            .nav-actions .btn {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                inset: var(--header-height) 16px auto 16px;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: #fff;
+                border: 1px solid var(--border);
+                border-radius: 24px;
+                padding: 14px;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li a {
+                display: block;
+                padding: 15px;
+                border-radius: 14px;
+            }
+
+            .nav-links li a:hover {
+                background: var(--bg-soft);
+            }
+
+            .nav-links a::after {
+                display: none;
+            }
+
+            .hero-grid,
+            .position-card,
+            .chooser,
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                min-height: 500px;
+            }
+
+            .dashboard-card {
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+            }
+
+            .floating-note {
+                left: 20px;
+            }
+
+            .process-grid,
+            .differentials-grid,
+            .path-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-card::after,
+            .path-item::after {
+                display: none;
+            }
+
+            .service-grid,
+            .service-grid.two,
+            .audience-grid,
+            .value-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .chooser-options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .container {
+                width: min(100% - 24px, var(--max-width));
+            }
+
+            .section {
+                padding: 72px 0;
+            }
+
+            .hero {
+                padding: 44px 0 76px;
+            }
+
+            .hero-content h1 {
+                letter-spacing: -0.07em;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-actions,
+            .final-actions {
+                width: 100%;
+            }
+
+            .trust-row {
+                flex-direction: column;
+            }
+
+            .hero-visual {
+                min-height: 620px;
+            }
+
+            .dashboard-card {
+                width: 100%;
+                top: 28px;
+            }
+
+            .floating-note {
+                width: calc(100% - 32px);
+                left: 16px;
+                bottom: 20px;
+            }
+
+            .mini-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-item {
+                grid-template-columns: 44px 1fr;
+            }
+
+            .status-pill {
+                grid-column: 1 / -1;
+                width: max-content;
+            }
+
+            .position-card,
+            .chooser,
+            .commercial-path {
+                padding: 24px;
+                border-radius: 28px;
+            }
+
+            .step-cards,
+            .audience-grid,
+            .process-grid,
+            .service-grid,
+            .service-grid.two,
+            .differentials-grid,
+            .value-grid,
+            .path-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .group-title {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .service-card {
+                padding: 24px;
+            }
+
+            .final-cta {
+                padding: 52px 20px;
+                border-radius: 28px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .whatsapp-float {
+                width: 58px;
+                height: 58px;
+                right: 16px;
+                bottom: 16px;
+            }
+        }
+
+        /* ===== Marca mais clara ===== */
+        .brand-mark.clearer {
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0b5cff, #2ee6a6);
+            box-shadow: 0 12px 24px rgba(11, 92, 255, 0.22);
+            font-size: 1.35rem;
+        }
+
+        .brand-text strong {
+            font-size: 1.02rem;
+        }
+
+        /* ===== Ícones inline do WhatsApp ===== */
+        .wa-inline-icon,
+        .wa-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0;
+        }
+
+        .wa-inline-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .wa-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .btn {
+            gap: 10px;
+        }
+
+        /* ===== Botão flutuante do WhatsApp ===== */
+        .whatsapp-float-wrapper {
+            position: fixed;
+            right: 20px;
+            bottom: 88px;
+            /* sobe o botão */
+            z-index: 1100;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .whatsapp-float-wrapper.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px);
+        }
+
+        .whatsapp-close {
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 999px;
+            background: rgba(7, 23, 47, 0.88);
+            color: #fff;
+            font-size: 0.86rem;
+            cursor: pointer;
+            box-shadow: 0 10px 22px rgba(7, 23, 47, 0.18);
+        }
+
+        .whatsapp-float {
+            position: static;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #25d366, #11b45b);
+            color: #fff;
+            box-shadow: 0 18px 34px rgba(37, 211, 102, 0.36);
+            border: 3px solid rgba(255, 255, 255, 0.74);
+            transition: transform 0.25s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        /* ===== Fundo visual do hero ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 10% 15%, rgba(11, 92, 255, 0.12), transparent 28%),
+                radial-gradient(circle at 90% 12%, rgba(46, 230, 166, 0.14), transparent 30%),
+                linear-gradient(135deg, #f6f9fc 0%, #f4f8ff 40%, #eefcf7 100%);
+        }
+
+        .hero-bg-scene {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .hero-light {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(30px);
+            opacity: 0.7;
+        }
+
+        .light-1 {
+            width: 320px;
+            height: 320px;
+            top: 70px;
+            left: -60px;
+            background: rgba(11, 92, 255, 0.14);
+            animation: drift 11s ease-in-out infinite;
+        }
+
+        .light-2 {
+            width: 420px;
+            height: 420px;
+            right: -80px;
+            top: 40px;
+            background: rgba(46, 230, 166, 0.16);
+            animation: drift 13s ease-in-out infinite reverse;
+        }
+
+        .light-3 {
+            width: 260px;
+            height: 260px;
+            left: 50%;
+            bottom: -80px;
+            transform: translateX(-50%);
+            background: rgba(255, 215, 106, 0.18);
+            animation: drift 9s ease-in-out infinite;
+        }
+
+        .hero-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(11, 92, 255, 0.12);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.02));
+        }
+
+        .ring-1 {
+            width: 520px;
+            height: 520px;
+            right: 6%;
+            top: 110px;
+            opacity: 0.55;
+        }
+
+        .ring-2 {
+            width: 340px;
+            height: 340px;
+            right: 13%;
+            top: 200px;
+            opacity: 0.4;
+        }
+
+        .ring-3 {
+            width: 180px;
+            height: 180px;
+            right: 21%;
+            top: 280px;
+            opacity: 0.35;
+        }
+
+        .floating-context-card {
+            position: absolute;
+            padding: 14px 16px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.56);
+            border: 1px solid rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 14px 34px rgba(7, 23, 47, 0.08);
+            min-width: 150px;
+            animation: floatCard 8s ease-in-out infinite;
+        }
+
+        .floating-context-card span {
+            display: block;
+            font-size: 1.25rem;
+            margin-bottom: 6px;
+        }
+
+        .floating-context-card strong {
+            display: block;
+            font-size: 0.94rem;
+            line-height: 1.1;
+            color: #102033;
+            margin-bottom: 3px;
+        }
+
+        .floating-context-card small {
+            color: #65758b;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .context-card-1 {
+            top: 120px;
+            left: 8%;
+        }
+
+        .context-card-2 {
+            bottom: 105px;
+            left: 12%;
+            animation-delay: 1.2s;
+        }
+
+        .context-card-3 {
+            top: 180px;
+            right: 10%;
+            animation-delay: 2.1s;
+        }
+
+        @keyframes drift {
+
+            0%,
+            100% {
+                transform: translateY(0px) translateX(0px);
+            }
+
+            50% {
+                transform: translateY(-18px) translateX(10px);
+            }
+        }
+
+        @keyframes floatCard {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* ===== Ajuste da nota escura para não bater na leitura ===== */
+        .floating-note {
+            left: -30px;
+            bottom: 18px;
+        }
+
+        /* ===== Responsivo ===== */
+        @media (max-width: 760px) {
+            .brand-mark.clearer {
+                width: 44px;
+                height: 44px;
+                font-size: 1.15rem;
+            }
+
+            .whatsapp-float-wrapper {
+                right: 14px;
+                bottom: 88px;
+            }
+
+            .whatsapp-float {
+                width: 58px;
+                height: 58px;
+            }
+
+            .hero-ring,
+            .floating-context-card {
+                display: none;
+            }
+
+            .floating-note {
+                left: 16px;
+                bottom: 10px;
+            }
+        }
+
+
+        /* ===== V3: Organização visual do hero e ajustes dos flutuantes ===== */
+        .hero {
+            isolation: isolate;
+        }
+
+        .hero-bg-scene {
+            z-index: 0;
+        }
+
+        .hero-grid {
+            z-index: 3;
+        }
+
+        .hero-content,
+        .hero-visual {
+            position: relative;
+            z-index: 3;
+        }
+
+        .floating-context-card {
+            z-index: 1;
+            opacity: 0.78;
+            transform: translateZ(0);
+        }
+
+        .context-card-1 {
+            top: 135px;
+            left: auto;
+            right: 42%;
+        }
+
+        .context-card-2 {
+            left: auto;
+            right: 78%;
+            bottom: 94px;
+        }
+
+        .context-card-3 {
+            top: 132px;
+            right: 5%;
+        }
+
+        .floating-note {
+            left: clamp(-92px, -5vw, -42px);
+            bottom: 58px;
+            width: 250px;
+            padding: 20px 42px 20px 20px;
+            z-index: 6;
+        }
+
+        .floating-note.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(12px) scale(0.98);
+        }
+
+        .floating-note-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 26px;
+            height: 26px;
+            border: 0;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            font-size: 1.1rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .floating-note-close:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: scale(1.06);
+        }
+
+        .whatsapp-float {
+            position: fixed !important;
+            right: 24px;
+            bottom: 86px;
+            z-index: 1100;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #25d366, #11b45b);
+            color: #fff;
+            box-shadow: 0 18px 34px rgba(37, 211, 102, 0.36);
+            border: 3px solid rgba(255, 255, 255, 0.74);
+            transition: transform 0.25s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        @media (max-width: 1080px) {
+            .floating-context-card {
+                opacity: 0.42;
+            }
+
+            .context-card-1,
+            .context-card-2,
+            .context-card-3 {
+                display: none;
+            }
+
+            .floating-note {
+                left: 18px;
+                bottom: 28px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .floating-note {
+                position: absolute;
+                left: 14px;
+                right: 14px;
+                bottom: 16px;
+                width: auto;
+            }
+
+            .whatsapp-float {
+                right: 16px;
+                bottom: 82px;
+                width: 58px;
+                height: 58px;
+            }
+        }
+
+        /* ===== Caixa de aviso do hero reposicionada ===== */
+        .hero-note {
+            position: relative;
+            left: auto;
+            bottom: auto;
+            width: min(100%, 360px);
+            margin-top: 50px;
+            margin-left: 152px;
+            padding: 22px 52px 22px 22px;
+            border-radius: 24px;
+            background: var(--bg-dark);
+            color: #fff;
+            box-shadow: 0 18px 42px rgba(7, 23, 47, 0.18);
+            z-index: 2;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-note strong {
+            display: block;
+            font-size: 1rem;
+            line-height: 1.35;
+            margin-bottom: 8px;
+        }
+
+        .hero-note p {
+            color: rgba(255, 255, 255, 0.74);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .floating-note-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            font-size: 1.2rem;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        .floating-note-close:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: scale(1.06);
+        }
+
+        .hero-note.hidden {
+            display: none;
+        }
+
+        /* Evita conflito com a versão antiga da floating-note */
+        .hero-visual .floating-note {
+            display: none;
+        }
+
+        @media (max-width: 1080px) {
+            .hero-note {
+                width: min(100%, 420px);
+                margin-bottom: 34px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .hero-note {
+                position: relative;
+                left: auto;
+                bottom: auto;
+                width: min(100%, 360px);
+                margin-top: 26px;
+                margin-left: 80px;
+                padding: 22px 52px 22px 22px;
+                border-radius: 24px;
+                background: var(--bg-dark);
+                color: #fff;
+                box-shadow: 0 18px 42px rgba(7, 23, 47, 0.18);
+                z-index: 2;
+                animation: float 8s ease-in-out infinite;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .hero-note {
+                margin-left: 200px;
+            }
+        }
+
+        /* ===== Caixa centralizada do hero ===== */
+        .hero-help-card {
+            position: relative;
+            width: min(100%, 420px);
+            margin: 30px auto 0;
+            padding: 24px 58px 24px 26px;
+            border-radius: 26px;
+            background: var(--bg-dark);
+            color: #fff;
+            box-shadow: 0 22px 52px rgba(7, 23, 47, 0.22);
+            z-index: 5;
+            animation: heroHelpFloat 8s ease-in-out infinite;
+        }
+
+        .hero-help-card strong {
+            display: block;
+            font-size: 1.05rem;
+            line-height: 1.35;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-help-card p {
+            color: rgba(255, 255, 255, 0.74);
+            font-size: 0.94rem;
+            line-height: 1.5;
+        }
+
+        .hero-help-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 34px;
+            height: 34px;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.16);
+            color: #fff;
+            font-size: 1.35rem;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        .hero-help-close:hover {
+            background: rgba(255, 255, 255, 0.26);
+            transform: scale(1.06);
+        }
+
+        .hero-help-card.hidden {
+            display: none;
+        }
+
+        @keyframes heroHelpFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* Garante que a caixa antiga, caso tenha sobrado no hero-visual, não apareça */
+        .hero-visual .floating-note {
+            display: none !important;
+        }
+
+        @media (max-width: 760px) {
+            .hero-help-card {
+                width: 100%;
+                margin: 28px auto 0;
+                padding: 24px 58px 24px 24px;
+                border-radius: 24px;
+                animation: none;
+            }
+
+            .hero-help-card strong {
+                font-size: 1.02rem;
+            }
+
+            .hero-help-card p {
+                font-size: 0.92rem;
+            }
+        }
+
+
+        /* ===== FIX FINAL V3.2: caixa de orientação centralizada e sem conflitos ===== */
+        .hero-content .hero-help-card {
+            position: relative !important;
+            width: min(100%, 430px) !important;
+            margin: 30px auto 0 !important;
+            padding: 24px 60px 24px 26px !important;
+            border-radius: 26px !important;
+            background: var(--bg-dark) !important;
+            color: #fff !important;
+            box-shadow: 0 22px 52px rgba(7, 23, 47, 0.22) !important;
+            z-index: 10 !important;
+            animation: heroHelpFloat 8s ease-in-out infinite !important;
+            text-align: left !important;
+        }
+
+        .hero-content .hero-help-card strong {
+            display: block !important;
+            font-size: 1.05rem !important;
+            line-height: 1.35 !important;
+            margin-bottom: 10px !important;
+            letter-spacing: -0.02em !important;
+            color: #fff !important;
+        }
+
+        .hero-content .hero-help-card p {
+            color: rgba(255, 255, 255, 0.74) !important;
+            font-size: 0.94rem !important;
+            line-height: 1.5 !important;
+            margin: 0 !important;
+        }
+
+        .hero-help-close {
+            position: absolute !important;
+            top: 16px !important;
+            right: 16px !important;
+            width: 34px !important;
+            height: 34px !important;
+            border: none !important;
+            border-radius: 999px !important;
+            background: rgba(255, 255, 255, 0.16) !important;
+            color: #fff !important;
+            font-size: 1.35rem !important;
+            line-height: 1 !important;
+            cursor: pointer !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: background 0.25s ease, transform 0.25s ease !important;
+        }
+
+        .hero-help-close:hover {
+            background: rgba(255, 255, 255, 0.26) !important;
+            transform: scale(1.06) !important;
+        }
+
+        .hero-help-card.hidden {
+            display: none !important;
+        }
+
+        @keyframes heroHelpFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @media (max-width: 1080px) {
+            .hero-content .hero-help-card {
+                width: min(100%, 430px) !important;
+                margin: 28px auto 34px !important;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .hero-content .hero-help-card {
+                width: 100% !important;
+                margin: 28px auto 34px !important;
+                padding: 24px 58px 24px 24px !important;
+                border-radius: 24px !important;
+                animation: none !important;
+            }
+        }
+    
+
+        /* ===== V3.3 FINAL: centralização real da caixa de ajuda ===== */
+        .hero-grid {
+            row-gap: 28px;
+        }
+
+        .hero-help-card {
+            grid-column: 1 / -1;
+            justify-self: center;
+            align-self: center;
+            width: min(100%, 520px);
+            margin: 6px auto 0 !important;
+            padding: 24px 58px 24px 26px;
+            border-radius: 26px;
+            background: var(--bg-dark);
+            color: #fff;
+            box-shadow: 0 22px 52px rgba(7, 23, 47, 0.22);
+            z-index: 5;
+            animation: heroHelpFloat 12s ease-in-out infinite;
+        }
+
+        .hero-help-card.hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 1080px) {
+            .hero-content {
+                order: 1;
+            }
+
+            .hero-help-card {
+                order: 2;
+                grid-column: 1;
+                width: min(100%, 520px);
+                margin: 28px auto 0 !important;
+                justify-self: center;
+            }
+
+            .hero-visual {
+                order: 3;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .hero-help-card {
+                width: 100%;
+                margin: 28px auto 0 !important;
+                padding: 24px 58px 24px 24px;
+                border-radius: 24px;
+                animation: none;
+            }
+        }
+
+        /* ===== Tipografia atualizada ===== */
+        h1, h2, h3, h4, h5, h6,
+        .brand-text strong,
+        .group-title h3,
+        .mock-title,
+        .chooser h2,
+        .final-cta h2 {
+            font-family: "Syne", sans-serif;
+        }
+
+        .btn {
+            font-family: "DM Sans", sans-serif;
+            letter-spacing: -0.01em;
+        }
+
+        /* ===== Ícones Lucide ===== */
+        [data-lucide] {
+            display: inline-block;
+            stroke-width: 1.75;
+            vertical-align: middle;
+        }
+
+        .service-icon [data-lucide] {
+            width: 28px;
+            height: 28px;
+            color: var(--primary);
+        }
+
+        .audience-card span [data-lucide] {
+            width: 34px;
+            height: 34px;
+            color: var(--primary);
+        }
+
+        .differential-card span [data-lucide] {
+            width: 20px;
+            height: 20px;
+            color: #087b60;
+        }
+
+        .value-card span [data-lucide] {
+            width: 30px;
+            height: 30px;
+            color: var(--accent);
+        }
+
+        .mini-card span [data-lucide] {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+        }
+
+        .flow-icon [data-lucide] {
+            width: 22px;
+            height: 22px;
+            color: var(--primary);
+        }
+
+        .floating-context-card span [data-lucide] {
+            width: 26px;
+            height: 26px;
+            color: var(--primary);
+        }
+
+        .chooser-option span [data-lucide] {
+            width: 28px;
+            height: 28px;
+            color: rgba(255,255,255,0.95);
+        }
+
+        .brand-mark.clearer [data-lucide] {
+            width: 22px;
+            height: 22px;
+            color: white;
+        }
+
+        /* Ajuste de espaçamento para spans que tinham fontSize grande p/ emojis */
+        .audience-card span,
+        .value-card span,
+        .chooser-option span {
+            line-height: 1;
+        }
+
+</style>
+</head>
+<body>
+<!-- DESCOMPLICA DIGITAL Instrução importante: 1. Substitua o número abaixo no JavaScript: const whatsappNumber = "5511999999999"; 2. Use o formato: 55 + DDD + número Exemplo: 5511999999999 3. Salve este arquivo como index.html. -->
+<header aria-label="Cabeçalho principal" class="header">
+<div class="container">
+<nav aria-label="Navegação principal" class="nav"> <a aria-label="Ir para o início" class="brand" href="#inicio">
+<div aria-hidden="true" class="brand-mark clearer"><i data-lucide="zap"></i></div>
+<div class="brand-text">
+<strong>Descomplica Digital</strong>
+</div>
+</a>
+<ul class="nav-links" id="navLinks">
+<li><a href="#inicio">Início</a></li>
+<li><a href="#como-funciona">Como funciona</a></li>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#para-quem">Para quem é</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+<div class="nav-actions"> <a class="btn btn-primary js-whatsapp" data-message="Olá! Vim pelo site do Descomplica Digital e gostaria de entender qual serviço faz mais sentido para mim." href="#contato">
+<span aria-hidden="true" class="wa-inline-icon">
+<svg fill="currentColor" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.11 17.23c-.27-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.71-1.33-1.58-1.48-1.85-.16-.27-.02-.41.12-.55.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.48-.84-2.03-.22-.52-.44-.45-.61-.46h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.63 1.11 2.81.14.18 1.9 2.9 4.61 4.06.64.28 1.14.44 1.53.56.64.2 1.22.17 1.68.1.51-.08 1.61-.66 1.84-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32z"></path>
+<path d="M16.02 3.2c-7.07 0-12.8 5.69-12.8 12.71 0 2.24.59 4.42 1.72 6.33L3.12 28.8l6.72-1.76a12.9 12.9 0 0 0 6.17 1.57h.01c7.06 0 12.78-5.7 12.78-12.72 0-3.39-1.33-6.57-3.74-8.96A12.7 12.7 0 0 0 16.02 3.2zm0 23.28h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-3.99 1.05 1.07-3.89-.25-.4a10.5 10.5 0 0 1-1.64-5.61c0-5.85 4.8-10.61 10.68-10.61 2.86 0 5.55 1.11 7.57 3.12 2.02 2 3.13 4.68 3.13 7.5 0 5.86-4.79 10.62-10.72 10.62z"></path>
+</svg>
+</span>
+Falar no WhatsApp </a> <button aria-expanded="false" aria-label="Abrir menu" class="menu-toggle" id="menuToggle"> <span></span> <span></span> <span></span> </button> </div>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero" id="inicio">
+<div aria-hidden="true" class="hero-bg-scene">
+<div class="hero-light light-1"></div>
+<div class="hero-light light-2"></div>
+<div class="hero-light light-3"></div>
+<div class="hero-ring ring-1"></div>
+<div class="hero-ring ring-2"></div>
+<div class="hero-ring ring-3"></div>
+<div class="floating-context-card context-card-1"><span><i data-lucide="bar-chart-2"></i></span> 
+<strong>Organização</strong>
+<small>Ajudamos a ter mais clareza <p> para agir corretamente <p> sua rotina e sua vida</small>
+</div>
+<div class="floating-context-card context-card-2"><span><i data-lucide="cpu"></i></span>
+<strong>Tecnologia</strong>
+<small>O uso da tecnologia para te <p> apoiar e otimizar seu trabalho</small>
+</div>
+<!-- ajustar a posição deste balão para não ficar escondido-->
+<div class="floating-context-card context-card-3"><span><i data-lucide="shopping-cart"></i></span>
+<strong>Estratégia</strong>
+<small>Presença e vendas</small>
+</div>
+</div>
+<div class="container">
+<div class="hero-grid">
+<div class="hero-content reveal">
+<!--Ajustar o balão da frase principal que está desfocado da mensagem-->
+<div class="eyebrow"> <h1>Tecnologia, organização e estratégia</h1></div>
+<h2> Resolva os seus problemas <span>sem complicação.</span> </h2>
+<p class="hero-lead"> O Descomplica Digital ajuda você a organizar pendências, usar melhor a tecnologia, melhorar sua presença online, estruturar vendas e tomar decisões com mais clareza, além de resolver problemas do dia a dia. </p>
+<div class="hero-actions"> <a class="btn btn-primary js-whatsapp" data-message="Olá! Quero falar sobre o Descomplica Digital e entender como você pode me ajudar." href="#contato">
+<span aria-hidden="true" class="wa-inline-icon">
+<svg fill="currentColor" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.11 17.23c-.27-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.71-1.33-1.58-1.48-1.85-.16-.27-.02-.41.12-.55.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.48-.84-2.03-.22-.52-.44-.45-.61-.46h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.63 1.11 2.81.14.18 1.9 2.9 4.61 4.06.64.28 1.14.44 1.53.56.64.2 1.22.17 1.68.1.51-.08 1.61-.66 1.84-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32z"></path>
+<path d="M16.02 3.2c-7.07 0-12.8 5.69-12.8 12.71 0 2.24.59 4.42 1.72 6.33L3.12 28.8l6.72-1.76a12.9 12.9 0 0 0 6.17 1.57h.01c7.06 0 12.78-5.7 12.78-12.72 0-3.39-1.33-6.57-3.74-8.96A12.7 12.7 0 0 0 16.02 3.2zm0 23.28h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-3.99 1.05 1.07-3.89-.25-.4a10.5 10.5 0 0 1-1.64-5.61c0-5.85 4.8-10.61 10.68-10.61 2.86 0 5.55 1.11 7.57 3.12 2.02 2 3.13 4.68 3.13 7.5 0 5.86-4.79 10.62-10.72 10.62z"></path>
+</svg>
+</span>
+Falar no WhatsApp </a> <a class="btn btn-outline" href="#servicos"> Ver serviços </a>
+</div>
+<div aria-label="Destaques do atendimento" class="trust-row">
+<h2><div class="trust-item"> <span class="check">✓</span> Atendimento remoto </div>
+<div class="trust-item"> <span class="check">✓</span> Solução personalizada </div>
+<div class="trust-item"> <span class="check">✓</span> Linguagem simples </div>
+</div>
+
+</div>
+<div aria-label="Representação visual dos serviços do Descomplica Digital" class="hero-visual reveal">
+<div class="orb one"></div>
+<div class="orb two"></div>
+<div class="dashboard-card">
+<div class="dashboard-top">
+<div aria-hidden="true" class="window-dots"> <span></span> <span></span> <span></span>
+</div>
+<div class="dashboard-badge">Plano claro</div>
+</div>
+<h2 class="mock-title"> Do problema confuso <p> ao próximo passo possível. </h2>
+<div class="flow-list">
+<div class="flow-item">
+<div class="flow-icon"><i data-lucide="message-circle"></i></div>
+<div> <strong>Entendimento</strong> <span>Você explica sua necessidade</span> </div>
+<span class="status-pill">Início</span>
+</div>
+<div class="flow-item">
+<div class="flow-icon"><i data-lucide="compass"></i></div>
+<div> <strong>Direcionamento</strong> <span>Organizamos o cenário</span> </div>
+<span class="status-pill">Clareza</span>
+</div>
+<div class="flow-item">
+<div class="flow-icon"><i data-lucide="settings"></i></div>
+<div> <strong>Execução</strong> <span>Aplicamos a solução</span> </div> <span class="status-pill">Ação</span>
+</div>
+</div>
+<div class="mini-grid">
+<div class="mini-card"><span><i data-lucide="cpu"></i></span><strong>IA e Tecnologia</strong></div>
+<div class="mini-card"><span><i data-lucide="wallet"></i></span><strong>Finanças</strong></div>
+<div class="mini-card"><span><i data-lucide="smartphone"></i></span><strong>Estratégia Digital</strong></div>
+<!--div class="mini-card"><span><i data-lucide="Wallet"></i></span><strong>Organização e Processos</strong></div> Novo balão de serviços flutuante, precisa posicionar e fazer aparecer -->
+</div>
+</div>
+</div><div class="hero-help-card" id="heroHelpCard">
+<button aria-label="Fechar aviso" class="hero-help-close" id="heroHelpClose" type="button">
+                                ×
+                            </button>
+<strong>Você não precisa saber por onde começar!</strong>
+<p>
+A primeira etapa é entender o problema e organizar um caminho possível.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Posicionamento" class="section section-sm">
+<div class="container">
+<div class="position-card reveal">
+<div class="position-copy">
+<div class="eyebrow"> <h2>💡Apoio prático</h2></div>
+<h3> Para quando você sabe que precisa resolver, mas não sabe por onde começar. </h3>
+<p> O Descomplica Digital existe para ajudar pessoas, profissionais e pequenos negócios que se
+                            sentem perdidos com tecnologia, organização, processos, documentos, finanças, redes sociais
+                            ou vendas online. </p>
+<div class="promise"> Clareza para entender. Organização para agir. Tecnologia para facilitar.
+                        </div>
+</div>
+<div class="step-cards">
+<div class="step-card">
+<div class="step-number">1</div>
+<h3>Entender o problema</h3>
+<p> Antes de sair fazendo, entendemos o cenário, as dúvidas e o que realmente precisa ser
+                                resolvido. </p>
+</div>
+<div class="step-card">
+<div class="step-number">2</div>
+<h3>Organizar o caminho</h3>
+<p> Colocamos ordem nas informações, prioridades e possibilidades para facilitar sua
+                                decisão. </p>
+</div>
+<div class="step-card">
+<div class="step-number">3</div>
+<h3>Executar ou orientar</h3>
+<p> A solução pode ser executada, configurada, planejada ou explicada de forma simples. </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="para-quem">
+<div class="container">
+<div class="section-header center reveal">
+<div class="eyebrow"><h2>Para quem é </h2> </div>
+<h3> Um serviço para quem precisa de clareza, direção e solução prática. </h3>
+<p> A proposta é ajudar pessoas comuns, profissionais autônomos e pequenos negócios a resolverem
+                        situações reais com menos confusão e mais segurança. </p>
+</div>
+<div class="audience-grid">
+<article class="audience-card reveal"><span><i data-lucide="smartphone"></i></span>
+<h3>Pessoas que se sentem perdidas com tecnologia</h3>
+<p> Para quem quer usar ferramentas digitais, IA ou aplicativos sem complicação técnica. </p>
+</article>
+<article class="audience-card reveal"><span><i data-lucide="folder-open"></i></span>
+<h3>Profissionais que querem organizar melhor a rotina</h3>
+<p> Para quem precisa estruturar informações, documentos, processos ou tarefas administrativas.
+                        </p>
+</article>
+<article class="audience-card reveal"><span><i data-lucide="store"></i></span>
+<h3>Pequenos negócios que precisam melhorar processos</h3>
+<p> Para quem quer mais organização, produtividade, presença digital ou vendas estruturadas.
+                        </p>
+</article>
+<article class="audience-card reveal"><span><i data-lucide="car"></i></span>
+<h3>Quem precisa resolver pendências práticas</h3>
+<p> Apoio para organizar informações relacionadas a documentos, veículos e regularizações. </p>
+</article>
+<article class="audience-card reveal"><span><i data-lucide="cpu"></i></span>
+<h3>Quem quer usar IA e automações de forma simples</h3>
+<p> Para transformar tecnologia em ferramenta útil no dia a dia, não em mais uma dificuldade.
+                        </p>
+</article>
+<article class="audience-card reveal"><span><i data-lucide="compass"></i></span>
+<h3>Quem precisa de orientação antes de decidir</h3>
+<p> Para entender opções, organizar prioridades e agir com mais segurança. </p>
+</article>
+</div>
+</div>
+</section>
+<section class="section dark-section" id="como-funciona">
+<div class="container">
+<div class="section-header center reveal">
+<div class="eyebrow dark"><h2>Como funciona</div>
+<h3> Atendimento remoto, personalizado e adaptado à sua realidade. </h3>
+<p> Tudo acontece no seu ritmo, no seu nível de conhecimento e dentro da sua necessidade atual. </p>
+</div>
+<div class="process-grid">
+<article class="process-card reveal"> <span class="num">01</span>
+<h3>Entendimento da necessidade</h3>
+<p> Primeiro, entendemos seu cenário atual, seus desafios e seus objetivos. </p>
+</article>
+<article class="process-card reveal"> <span class="num">02</span>
+<h3>Organização e planejamento</h3>
+<p> Organizamos informações, ideias, prioridades e ferramentas para definir o melhor caminho.
+                        </p>
+</article>
+<article class="process-card reveal"> <span class="num">03</span>
+<h3>Execução prática</h3>
+<p> Colocamos a solução em funcionamento, configurando ferramentas, criando estruturas ou
+                            ajustando processos. </p>
+</article>
+<article class="process-card reveal"> <span class="num">04</span>
+<h3>Direcionamento e acompanhamento</h3>
+<p> Você recebe orientação para manter, evoluir e usar a solução com mais autonomia. </p>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="servicos">
+<div class="container">
+<div class="section-header center reveal">
+<div class="eyebrow"><h2>Serviços</div>
+<h3> Escolha por onde quer começar. </h3>
+<p> Cada serviço foi pensado para descomplicar, organizar e gerar resultado. Você pode contratar de
+                        forma independente ou combinar soluções conforme sua necessidade. </p>
+</div>
+<div class="services-wrapper">
+<div class="service-group">
+<div class="group-title reveal">
+<h3>Quero organizar minha vida e rotina</h3> <span class="group-tag"> <h2>Clareza e
+                                Organização</span>
+</div>
+<div class="service-grid">
+<article class="service-card reveal">
+<div class="service-icon"><i data-lucide="wallet"></i></div>
+<h4>Consultoria Financeira</h4>
+<div class="impact">Organização, clareza e controle da vida financeira.</div>
+<p> Você sente que o dinheiro entra e sai, mas nunca sobra ou nunca fica claro para onde
+                                    está indo? Aqui, o foco é trazer clareza para que suas escolhas façam mais sentido.
+                                </p>
+<ul class="service-list">
+<li>Consulta Serasa e protestos</li>
+<li>Verificação de pendências</li>
+<li>Planejamento financeiro</li>
+<li>Planilha de controle financeiro</li>
+<li>Apoio para decisões mais seguras</li>
+</ul> <a class="btn btn-outline js-whatsapp" data-message="Olá! Quero entender melhor o serviço de Consultoria Financeira." href="#contato">
+                                    Quero entender esse serviço </a>
+</article>
+<article class="service-card reveal">
+<div class="service-icon"><i data-lucide="zap"></i></div>
+<h4>Organizar para resolver</h4>
+<div class="impact">Colocamos ordem no caos para você agir com mais segurança.</div>
+<p> Quando junta muita coisa, fica difícil saber por onde começar. O objetivo é entender
+                                    o que está acontecendo, organizar o cenário e mostrar caminhos possíveis. </p>
+<ul class="service-list">
+<li>Diagnóstico claro</li>
+<li>Análise completa da situação</li>
+<li>Prioridades bem definidas</li>
+<li>Apoio nas decisões</li>
+<li>Explicação simples, sem juridiquês</li>
+</ul> <a class="btn btn-outline js-whatsapp" data-message="Olá! Quero entender melhor o serviço Organizar para Resolver." href="#contato">
+                                    Quero entender esse serviço </a>
+</article>
+<article class="service-card reveal">
+<div class="service-icon"><i data-lucide="car"></i></div>
+<h4>Veículos e Documentos</h4>
+<div class="impact">Organização, orientação e resolução sem burocracia.</div>
+<p> Para quem perdeu tempo tentando entender processos, documentos ou pendências
+                                    relacionadas a veículos. O foco é organizar informações e facilitar os próximos
+                                    passos. </p>
+<ul class="service-list">
+<li>Consulta de débitos e situação do veículo</li>
+<li>Multas, IPVA e licenciamento</li>
+<li>CRLV e documentação digital</li>
+<li>Transferência de veículo</li>
+<li>Renovação de CNH e Condutax</li>
+</ul> <a class="btn btn-outline js-whatsapp" data-message="Olá! Quero entender melhor o serviço de Veículos e Documentos." href="#contato">
+                                    Quero entender esse serviço </a>
+</article>
+</div>
+</div>
+<div class="service-group">
+<div class="group-title reveal">
+<h3>Quero usar melhor tecnologia e produtividade</h3> <span class="group-tag"> <h2>Digital e
+                                Produtividade</span>
+</div>
+<div class="service-grid two">
+<article class="service-card reveal">
+<div class="service-icon"><i data-lucide="cpu"></i></div>
+<h4>Inteligência Artificial e Tecnologia</h4>
+<div class="impact">Tecnologia aplicada para facilitar o dia a dia.</div>
+<p> O foco não é acompanhar tendências, mas usar tecnologia e inteligência artificial
+                                    para resolver problemas reais de forma simples, funcional e estratégica. </p>
+<ul class="service-list">
+<li>Automação de tarefas e processos</li>
+<li>Organização digital e produtividade</li>
+<li>Escolha e uso de ferramentas tecnológicas</li>
+<li>Criação de portfólio digital</li>
+<li>Criação de agente personalizado</li>
+</ul> <a class="btn btn-outline js-whatsapp" data-message="Olá! Quero entender melhor o serviço de Inteligência Artificial e Tecnologia." href="#contato">
+                                    Quero entender esse serviço </a>
+</article>
+<article class="service-card reveal">
+<div class="service-icon"><i data-lucide="bar-chart-2"></i></div>
+<h4>Produtividade com Pacote Office</h4>
+<div class="impact">Ferramentas certas, usadas do jeito certo.</div>
+<p> Planilhas confusas, documentos desorganizados e tarefas que levam mais tempo do que
+                                    deveriam? Aqui, o foco é simplificar ferramentas para tornar sua rotina mais
+                                    produtiva. </p>
+<ul class="service-list">
+<li>Planilhas de Excel</li>
+<li>Documentos em Word</li>
+<li>Apresentações em PowerPoint</li>
+<li>Organização de rotinas administrativas</li>
+<li>Criação e otimização de materiais</li>
+</ul> <a class="btn btn-outline js-whatsapp" data-message="Olá! Quero entender melhor o serviço de Produtividade com Pacote Office." href="#contato">
+                                    Quero entender esse serviço </a>
+</article>
+</div>
+</div>
+<div class="service-group">
+<div class="group-title reveal">
+<h3>Quero melhorar minha presença online e vender melhor</h3> <span class="group-tag"><h2> Estratégia e Vendas</span>
+</div>
+<div class="service-grid two">
+<article class="service-card reveal">
+<div class="service-icon"><i data-lucide="smartphone"></i></div>
+<h4>Estratégia e Presença Digital</h4>
+<div class="impact">Redes sociais com propósito e resultado.</div>
+<p> Ter presença digital não é apenas aparecer, mas entender o que comunicar, para quem
+                                    e com qual objetivo. O foco é organizar sua estratégia. </p>
+<ul class="service-list">
+<li>Planejamento de conteúdo</li>
+<li>Análise de desempenho e otimização</li>
+<li>Atendimento automatizado no WhatsApp e Instagram</li>
+<li>Posicionamento digital</li>
+<li>Organização de calendário de postagens</li>
+</ul> <a class="btn btn-outline js-whatsapp" data-message="Olá! Quero entender melhor o serviço de Estratégia e Presença Digital." href="#contato">
+                                    Quero entender esse serviço </a>
+</article>
+<article class="service-card reveal">
+<div class="service-icon"><i data-lucide="shopping-cart"></i></div>
+<h4>Estruturação de Vendas Online</h4>
+<div class="impact">Do planejamento à conversão.</div>
+<p> Vendas online não precisam ser complicadas, precisam ser estruturadas. O foco é
+                                    organizar processos, oferta, funil e próximos passos. </p>
+<ul class="service-list">
+<li>Estrutura de vendas online</li>
+<li>Funil de vendas</li>
+<li>Comunicação e oferta</li>
+<li>Diagnóstico do negócio</li>
+<li>Execução e ajustes</li>
+</ul> <a class="btn btn-outline js-whatsapp" data-message="Olá! Quero entender melhor o serviço de Estruturação de Vendas Online." href="#contato">
+                                    Quero entender esse serviço </a>
+</article>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-sm">
+<div class="container">
+<div class="chooser reveal">
+<div>
+<div class="eyebrow dark"><h2>Orientação inicial</div>
+<h3> Não sabe por onde começar? </h3>
+<p> Você não precisa chegar com tudo resolvido. Me chama no WhatsApp, explica rapidamente o que
+                            está acontecendo e eu te ajudo a entender qual serviço faz mais sentido para o seu momento.
+                        </p> <a class="btn btn-accent js-whatsapp" data-message="Olá! Não sei exatamente qual serviço escolher e gostaria da sua ajuda para entender por onde começar." href="#contato">
+                            Me ajudar a escolher </a>
+</div>
+<div class="chooser-options"> <a class="chooser-option js-whatsapp" data-message="Olá! Tenho uma pendência e preciso de orientação para entender os próximos passos." href="#contato">
+<span><i data-lucide="map-pin"></i></span> <strong>Tenho uma pendência e preciso de orientação</strong>
+<small>Documentos, veículos, finanças ou situação confusa.</small> </a> <a class="chooser-option js-whatsapp" data-message="Olá! Quero organizar melhor minha rotina ou meu negócio." href="#contato">
+<span><i data-lucide="folder-open"></i></span> <strong>Quero organizar minha rotina ou negócio</strong> <small>Processos,
+                                ferramentas, planilhas e organização.</small> </a> <a class="chooser-option js-whatsapp" data-message="Olá! Quero usar tecnologia para produzir, vender ou resolver melhor." href="#contato">
+<span><i data-lucide="zap"></i></span> <strong>Quero usar tecnologia para vender ou produzir melhor</strong>
+<small>IA, presença digital, vendas online e automações.</small> </a> </div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-header center reveal">
+<div class="eyebrow"><h2>Diferenciais</div>
+<h3> Por que escolher o Descomplica Digital? </h3>
+<p> A proposta é unir visão prática, clareza de explicação e uso inteligente da tecnologia para
+                        simplificar sua vida. </p>
+</div>
+<div class="differentials-grid">
+<article class="differential-card reveal"> <span><i data-lucide="users"></i></span>
+<h3>Atendimento humano</h3>
+<p> Explicação clara, próxima e sem complicação técnica desnecessária. </p>
+</article>
+<article class="differential-card reveal"> <span><i data-lucide="sliders"></i></span>
+<h3>Soluções adaptadas</h3>
+<p> Cada atendimento considera sua realidade, necessidade e momento. </p>
+</article>
+<article class="differential-card reveal"> <span><i data-lucide="eye"></i></span>
+<h3>Clareza antes da execução</h3>
+<p> Primeiro entendemos o problema para depois definir o melhor caminho. </p>
+</article>
+<article class="differential-card reveal"> <span><i data-lucide="wifi"></i></span>
+<h3>Apoio remoto e prático</h3>
+<p> Atendimento digital, direto e focado no que precisa ser resolvido. </p>
+</article>
+<article class="differential-card reveal"> <span><i data-lucide="layout-list"></i></span>
+<h3>Organização para decidir</h3>
+<p> Você ganha mais segurança para agir e tomar decisões. </p>
+</article>
+<article class="differential-card reveal"> <span><i data-lucide="wrench"></i></span>
+<h3>Tecnologia como ferramenta</h3>
+<p> O digital serve para facilitar sua vida, não para criar mais obstáculos. </p>
+</article>
+<article class="differential-card reveal"> <span><i data-lucide="calendar"></i></span>
+<h3>Atendimento flexível</h3>
+<p> Pode ser pontual, por projeto personalizado ou acompanhamento contínuo. </p>
+</article>
+<article class="differential-card reveal"> <span><i data-lucide="target"></i></span>
+<h3>Foco em problemas reais</h3>
+<p> Serviços pensados para demandas práticas do dia a dia. </p>
+</article>
+</div>
+</div>
+</section>
+<section class="section dark-section">
+<div class="container">
+<div class="section-header center reveal">
+<div class="eyebrow dark"><h2> Resultado esperado</div>
+<h3> Mais clareza, menos dor de cabeça. </h3>
+<p> O objetivo não é complicar com métodos difíceis. É tornar o caminho mais simples, organizado e
+                        possível de seguir. </p>
+</div>
+<div class="value-grid">
+<article class="value-card reveal"><span><i data-lucide="wallet"></i></span>
+<h3>Vida financeira mais organizada</h3>
+<p>Mais clareza sobre pendências, escolhas e prioridades.</p>
+</article>
+<article class="value-card reveal"><span><i data-lucide="file-text"></i></span>
+<h3>Documentos com próximos passos definidos</h3>
+<p>Menos confusão para entender o que precisa ser feito.</p>
+</article>
+<article class="value-card reveal"><span><i data-lucide="cpu"></i></span>
+<h3>Rotina digital mais simples</h3>
+<p>Ferramentas e tecnologia funcionando a favor do seu dia a dia.</p>
+</article>
+<article class="value-card reveal"><span><i data-lucide="bar-chart-2"></i></span>
+<h3>Processos mais produtivos</h3>
+<p>Planilhas, documentos e materiais mais claros e funcionais.</p>
+</article>
+<article class="value-card reveal"><span><i data-lucide="smartphone"></i></span>
+<h3>Redes sociais com mais direção</h3>
+<p>Conteúdo com propósito, organização e intenção estratégica.</p>
+</article>
+<article class="value-card reveal"><span><i data-lucide="shopping-cart"></i></span>
+<h3>Vendas online melhor estruturadas</h3>
+<p>Oferta, funil e processos com mais organização e clareza.</p>
+</article>
+</div>
+</div>
+</section>
+<section aria-label="Processo comercial" class="section">
+<div class="container">
+<div class="section-header center reveal">
+<div class="eyebrow"><h2> Da dúvida à solução</div>
+<h3> O caminho é simples. </h3>
+<p> Você não precisa saber o nome do serviço. Basta explicar o que está acontecendo. </p>
+</div>
+<div class="commercial-path reveal">
+<div class="path-grid">
+<article class="path-item"> <span>1</span>
+<h3>Você chama no WhatsApp</h3>
+<p>Envie uma mensagem explicando sua necessidade.</p>
+</article>
+<article class="path-item"> <span>2</span>
+<h3>Eu entendo sua situação</h3>
+<p>Conversamos para organizar o cenário e identificar o problema.</p>
+</article>
+<article class="path-item"> <span>3</span>
+<h3>Você recebe direcionamento</h3>
+<p>Explico o caminho possível ou envio um orçamento.</p>
+</article>
+<article class="path-item"> <span>4</span>
+<h3>Executamos a solução</h3>
+<p>Apoio na prática, configuração, orientação ou estruturação.</p>
+</article>
+<article class="path-item"> <span>5</span>
+<h3>Você ganha clareza</h3>
+<p>Menos dor de cabeça e mais segurança para seguir.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Perguntas frequentes" class="section section-sm">
+<div class="container">
+<div class="faq-grid">
+<div class="section-header reveal">
+<div class="eyebrow"><h2>Perguntas comuns</div>
+<h3> Dúvidas antes de chamar? </h3>
+<p> Algumas respostas rápidas para facilitar seu primeiro contato. </p>
+</div>
+<div class="faq-list">
+<article class="faq-item active reveal"> <button class="faq-question" type="button"> O
+                                atendimento é presencial ou remoto? <span>+</span> </button>
+<div class="faq-answer">
+<p> O atendimento é feito de forma remota, com orientação personalizada conforme sua
+                                    necessidade. </p>
+</div>
+</article>
+<article class="faq-item reveal"> <button class="faq-question" type="button"> Preciso saber
+                                exatamente qual serviço contratar? <span>+</span> </button>
+<div class="faq-answer">
+<p> Não. Você pode explicar sua situação no WhatsApp e receber uma orientação inicial
+                                    sobre o caminho mais adequado. </p>
+</div>
+</article>
+<article class="faq-item reveal"> <button class="faq-question" type="button"> Os serviços são
+                                personalizados? <span>+</span> </button>
+<div class="faq-answer">
+<p> Sim. A proposta é adaptar o atendimento ao seu cenário, podendo ser algo pontual,
+                                    por projeto ou acompanhamento contínuo. </p>
+</div>
+</article>
+<article class="faq-item reveal"> <button class="faq-question" type="button"> Posso combinar
+                                mais de um serviço? <span>+</span> </button>
+<div class="faq-answer">
+<p> Sim. Os serviços podem ser contratados de forma independente ou combinados conforme
+                                    sua necessidade. </p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="contato">
+<div class="container">
+<div class="final-cta reveal">
+<h2> Vamos descomplicar o que está travando você? </h2>
+<p> Me chama no WhatsApp para tirar dúvidas, explicar sua situação ou solicitar um orçamento sem
+                        compromisso. </p>
+<div class="final-actions"> <a class="btn btn-accent js-whatsapp" data-message="Olá! Vim pelo site do Descomplica Digital e gostaria de falar sobre uma necessidade." href="#">
+<span aria-hidden="true" class="wa-inline-icon">
+<svg fill="currentColor" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.11 17.23c-.27-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.71-1.33-1.58-1.48-1.85-.16-.27-.02-.41.12-.55.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.48-.84-2.03-.22-.52-.44-.45-.61-.46h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.63 1.11 2.81.14.18 1.9 2.9 4.61 4.06.64.28 1.14.44 1.53.56.64.2 1.22.17 1.68.1.51-.08 1.61-.66 1.84-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32z"></path>
+<path d="M16.02 3.2c-7.07 0-12.8 5.69-12.8 12.71 0 2.24.59 4.42 1.72 6.33L3.12 28.8l6.72-1.76a12.9 12.9 0 0 0 6.17 1.57h.01c7.06 0 12.78-5.7 12.78-12.72 0-3.39-1.33-6.57-3.74-8.96A12.7 12.7 0 0 0 16.02 3.2zm0 23.28h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-3.99 1.05 1.07-3.89-.25-.4a10.5 10.5 0 0 1-1.64-5.61c0-5.85 4.8-10.61 10.68-10.61 2.86 0 5.55 1.11 7.57 3.12 2.02 2 3.13 4.68 3.13 7.5 0 5.86-4.79 10.62-10.72 10.62z"></path>
+</svg>
+</span>
+                            Falar no WhatsApp </a> <a class="btn btn-dark-outline" href="#servicos"> Ver serviços
+                            novamente </a> </div>
+<p style="margin-top: 24px; font-size: 0.92rem;"> Atendimento remoto, simples e personalizado. </p>
+</div>
+</div>
+</section>
+</main>
+<footer aria-label="Rodapé" class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<h3>Descomplica Digital</h3>
+<p> Tecnologia, organização e estratégia para resolver problemas reais. </p>
+</div>
+<div>
+<h3>Navegação</h3>
+<ul>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#como-funciona">Como funciona</a></li>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#para-quem">Para quem é</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</div>
+<div>
+<h3>Contato</h3>
+<ul>
+<li> <a class="js-whatsapp" data-message="Olá! Gostaria de falar com você sobre o Descomplica Digital." href="#"> Falar
+                                no WhatsApp </a> </li>
+<!-- <li>Atendimento remoto</li> -->
+<!-- <li>Instagram: adicionar perfil depois</li> -->
+</ul>
+</div>
+</div>
+<div class="footer-bottom"> <span>© <span id="currentYear"></span> Descomplica Digital. Todos os direitos
+                    reservados. </span> <span>Desenvolvido por BellaMi Serviços em Tecnologias  ME.</span> </div>
+</div>
+</footer>
+<a aria-label="Falar no WhatsApp" class="whatsapp-float js-whatsapp" data-message="Olá! Vim pelo site do Descomplica Digital e gostaria de atendimento." href="#">
+<span aria-hidden="true" class="wa-icon">
+<svg fill="currentColor" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.11 17.23c-.27-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.71-1.33-1.58-1.48-1.85-.16-.27-.02-.41.12-.55.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.48-.84-2.03-.22-.52-.44-.45-.61-.46h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.63 1.11 2.81.14.18 1.9 2.9 4.61 4.06.64.28 1.14.44 1.53.56.64.2 1.22.17 1.68.1.51-.08 1.61-.66 1.84-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32z"></path>
+<path d="M16.02 3.2c-7.07 0-12.8 5.69-12.8 12.71 0 2.24.59 4.42 1.72 6.33L3.12 28.8l6.72-1.76a12.9 12.9 0 0 0 6.17 1.57h.01c7.06 0 12.78-5.7 12.78-12.72 0-3.39-1.33-6.57-3.74-8.96A12.7 12.7 0 0 0 16.02 3.2zm0 23.28h-.01a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-3.99 1.05 1.07-3.89-.25-.4a10.5 10.5 0 0 1-1.64-5.61c0-5.85 4.8-10.61 10.68-10.61 2.86 0 5.55 1.11 7.57 3.12 2.02 2 3.13 4.68 3.13 7.5 0 5.86-4.79 10.62-10.72 10.62z"></path>
+</svg>
+</span>
+</a>
+<script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const whatsappNumber = "5511947959936";
+            const whatsappLinks = document.querySelectorAll(".js-whatsapp");
+
+            whatsappLinks.forEach((link) => {
+                const message = link.dataset.message || "Olá! Vim pelo site do Descomplica Digital.";
+                const encodedMessage = encodeURIComponent(message);
+
+                link.href = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+            });
+
+            const menuToggle = document.getElementById("menuToggle");
+            const navLinks = document.getElementById("navLinks");
+
+            if (menuToggle && navLinks) {
+                const closeMenu = () => {
+                    navLinks.classList.remove("active");
+                    menuToggle.classList.remove("active");
+                    menuToggle.setAttribute("aria-expanded", "false");
+                    document.body.classList.remove("menu-open");
+                };
+
+                menuToggle.addEventListener("click", () => {
+                    const isOpen = navLinks.classList.toggle("active");
+
+                    menuToggle.classList.toggle("active", isOpen);
+                    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+                    document.body.classList.toggle("menu-open", isOpen);
+                });
+
+                navLinks.addEventListener("click", (event) => {
+                    if (event.target.closest("a")) {
+                        closeMenu();
+                    }
+                });
+            }
+
+            const revealElements = document.querySelectorAll(".reveal");
+
+            if ("IntersectionObserver" in window) {
+                const revealObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.14 });
+
+                revealElements.forEach((element) => revealObserver.observe(element));
+            } else {
+                revealElements.forEach((element) => element.classList.add("visible"));
+            }
+
+            const faqItems = document.querySelectorAll(".faq-item");
+
+            faqItems.forEach((item) => {
+                const button = item.querySelector(".faq-question");
+
+                if (!button) {
+                    return;
+                }
+
+                button.addEventListener("click", () => {
+                    faqItems.forEach((otherItem) => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove("active");
+                        }
+                    });
+
+                    item.classList.toggle("active");
+                });
+            });
+
+            const currentYear = document.getElementById("currentYear");
+
+            if (currentYear) {
+                currentYear.textContent = new Date().getFullYear();
+            }
+
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+
+            const heroHelpCard = document.getElementById("heroHelpCard");
+            const heroHelpClose = document.getElementById("heroHelpClose");
+
+            if (heroHelpCard && heroHelpClose) {
+                heroHelpClose.addEventListener("click", () => {
+                    heroHelpCard.classList.add("hidden");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
